@@ -1,0 +1,43 @@
+:root {
+  --ink: #1b2a41;
+  --paper: #f7f9fc;
+  --accent: #2563eb;
+  --accent-dark: #1d4ed8;
+  --error: #c0392b;
+  --ok: #1f7a4d;
+  --line: #d5dce8;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: "Segoe UI", system-ui, sans-serif; color: var(--ink); background: var(--paper); }
+
+.auth-page { min-height: 100vh; display: grid; grid-template-columns: 1fr 1.1fr; }
+.auth-side { background: var(--ink); color: #fff; padding: 64px; display: flex; flex-direction: column; justify-content: center; }
+.brand { font-size: 3rem; margin: 0 0 12px; letter-spacing: -0.02em; }
+.auth-side p { font-size: 1.1rem; max-width: 30ch; line-height: 1.5; opacity: .85; }
+
+.auth-main { display: flex; align-items: center; justify-content: center; padding: 32px; }
+.auth-card { width: 100%; max-width: 400px; }
+.auth-card h2 { margin: 0 0 4px; font-size: 1.7rem; }
+.auth-sub { margin: 0 0 24px; color: #5b6b82; }
+
+.field { margin-bottom: 16px; display: flex; flex-direction: column; gap: 6px; }
+.field label { font-weight: 600; font-size: .9rem; }
+.field input { padding: 11px 12px; border: 1px solid var(--line); border-radius: 6px; font-size: 1rem; background: #fff; }
+.field input:focus { outline: 2px solid var(--accent); outline-offset: 1px; border-color: var(--accent); }
+.field input[aria-invalid="true"] { border-color: var(--error); }
+.field-error { color: var(--error); font-size: .85rem; }
+
+.btn { width: 100%; padding: 12px; border: 0; border-radius: 6px; background: var(--accent); color: #fff; font-size: 1rem; font-weight: 600; cursor: pointer; }
+.btn:hover { background: var(--accent-dark); }
+.btn:focus-visible, .link:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+
+.link { background: none; border: 0; padding: 0; color: var(--accent); cursor: pointer; font: inherit; text-decoration: underline; }
+.forgot { display: block; margin: -4px 0 16px auto; font-size: .9rem; }
+.auth-footer { margin-top: 20px; text-align: center; font-size: .95rem; }
+.success { background: #e7f6ee; color: var(--ok); padding: 14px; border-radius: 6px; }
+
+@media (max-width: 800px) {
+  .auth-page { grid-template-columns: 1fr; }
+  .auth-side { padding: 32px; }
+  .brand { font-size: 2rem; }
+}

@@ -1,0 +1,39 @@
+.navbar { display: flex; align-items: center; gap: 24px; padding: 14px 32px; background: var(--ink); color: #fff; flex-wrap: wrap; }
+.nav-brand { font-weight: 700; font-size: 1.25rem; margin-right: auto; }
+.nav-tab { background: none; border: 0; color: #cdd7e6; font: inherit; padding: 6px 10px; cursor: pointer; border-radius: 4px; }
+.nav-tab.active { color: #fff; background: rgba(255,255,255,.14); }
+.nav-user { display: flex; gap: 12px; align-items: center; }
+.nav-user .link { color: #9ec0ff; }
+
+.page { max-width: 960px; margin: 0 auto; padding: 32px 20px; }
+.page.narrow { max-width: 640px; }
+.meta { color: #5b6b82; }
+
+.quiz-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.quiz-card { background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 20px; display: flex; flex-direction: column; gap: 6px; }
+.quiz-card h3 { margin: 0; }
+.quiz-card p { margin: 0; }
+.quiz-card .btn { margin-top: auto; }
+
+.quiz-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-weight: 600; }
+.timer { font-variant-numeric: tabular-nums; background: #e8efff; padding: 4px 10px; border-radius: 999px; }
+.timer.low { background: #fde4e1; color: var(--error); }
+.progress { height: 8px; background: var(--line); border-radius: 4px; overflow: hidden; margin-bottom: 24px; }
+.progress-fill { height: 100%; background: var(--accent); transition: width .3s; }
+
+.question { font-size: 1.3rem; margin: 0 0 16px; }
+.options { display: grid; gap: 10px; margin-bottom: 24px; }
+.option { text-align: left; padding: 14px; font: inherit; background: #fff; border: 1px solid var(--line); border-radius: 6px; cursor: pointer; }
+.option:hover { border-color: var(--accent); }
+.option.picked { border-color: var(--accent); background: #e8efff; font-weight: 600; }
+.btn:disabled { opacity: .5; cursor: not-allowed; }
+.btn.ghost { background: #fff; color: var(--accent); border: 1px solid var(--accent); }
+.row { display: flex; gap: 12px; margin-top: 24px; }
+
+.review { padding-left: 20px; display: grid; gap: 12px; }
+.review li { padding: 12px; border-radius: 6px; border-left: 4px solid; background: #fff; }
+.review li.right { border-color: var(--ok); }
+.review li.wrong { border-color: var(--error); }
+
+.board { width: 100%; border-collapse: collapse; background: #fff; }
+.board th, .board td { padding: 10px 12px; text-align: left; border-bottom: 1px solid var(--line); }
